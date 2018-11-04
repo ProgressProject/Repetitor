@@ -56,7 +56,7 @@ coverage.xml
 *.log
 local_settings.py
 db.sqlite3
-secretkey.txt
+secretkey.py
 
 # Flask stuff:
 instance/
