@@ -3,7 +3,7 @@ from django.db import models
 
 # User = get_user_model()
 # from phonenumber_field.modelfields import PhoneNumberField
-
+# Update models
 # Create your models here.
 class Course(models.Model):
     course_name = models.CharField('course_name', max_length = 150)
