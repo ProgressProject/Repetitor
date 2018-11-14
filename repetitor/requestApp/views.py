@@ -16,4 +16,4 @@ def reviews(request):
 def students_list(request):
     """ выводит список всех оставивших заявку, студентов """
     students = Student.objects.all()
-    return render(request, 'blog/students_list.html', context={'students': students})
+    return render(request, 'requestApp/students_list.html', context={'students': students})
