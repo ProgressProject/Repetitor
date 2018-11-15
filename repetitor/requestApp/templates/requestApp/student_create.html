@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Student create:
+{% endblock %}
+
+
+{% block content %}
+
+        <form action="{% url 'student_create_url' %}" method="post">
+
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="forms-group">
+                    {{ field.label }}
+                    {{ field }}
+                </div>
+            {% endfor %}
+
+            <button type="submit" class="btn btn-succes">create student</button>
+        </form>
+
+
+{% endblock %}
