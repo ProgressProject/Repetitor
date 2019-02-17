@@ -7,6 +7,8 @@ from .forms import StudentForm
 
 
 def info(request):
+    temp = request.session.get('temp')
+    request.session['temp'] = ''
     return render(request, 'requestApp/info_course.html')
 
 # Create your views here.
@@ -20,6 +22,14 @@ def students_list(request):
     """ выводит список всех оставивших заявку, студентов """
     students = Student.objects.all()
     return render(request, 'requestApp/students_list.html', context={'students': students})
+
+def fromJs(request):
+    field_label = request.POST.get('field_label')
+    body = request.POST.get('body')
+    if body == 'xyi':
+        temp = 'new_string'
+        request.session['temp'] = temp
+    # return HttpResponse(json.dumps(response_data), content_type='application/json')
 
 
 class StudentCreate(View):

@@ -13,6 +13,8 @@
             {% csrf_token %}
             {% for field in form %}
                 <div class="forms-group">
+                    <input type="text" class='field_label' name="" value="">
+                    <input type="text" class="body" name="" value="">
                     {{ field.label }}
                     {{ field }}
                 </div>
